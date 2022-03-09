@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+  </head>
+  <body>
+    <h1>Weather Info</h1>
+    <!-- SEARCH BAR -->
+    <form class="search-container" id="search-form">
+      <input type="text" id="search-bar" placeholder="Enter a city..." />
+      <a href="#"
+        ><img
+          class="search-icon"
+          src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"
+      /></a>
+    </form>
+    <!-- ADAPTER CARD CONTAINER -->
+    <div id="weather-card"></div>
+    <script type="text/javascript" src="./src/config.js"></script>
+    <script src="https://unpkg.com/adaptivecards-templating@1.0/dist/adaptivecards-templating.min.js"></script>
+    <script src="https://unpkg.com/adaptivecards/dist/adaptivecards.js"></script>
+    <script type="module" src="/src/app.js" defer></script>
+  </body>
+</html>

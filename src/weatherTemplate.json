@@ -1,0 +1,117 @@
+{
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "type": "AdaptiveCard",
+  "version": "1.5",
+  "body": [
+    {
+      "type": "TextBlock",
+      "text": "${name}, ${country}",
+      "size": "ExtraLarge",
+      "wrap": true,
+      "color": "Accent",
+      "separator": true
+    },
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${temperature}",
+              "size": "ExtraLarge",
+              "horizontalAlignment": "Right",
+              "height": "stretch"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "°C",
+              "horizontalAlignment": "Left",
+              "size": "Medium",
+              "weight": "bolder",
+              "height": "stretch"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "${imgURL}",
+              "height": "stretch"
+            }
+          ]
+        },
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "${desc_short}",
+              "horizontalAlignment": "Left",
+              "isSubtle": true,
+              "size": "medium"
+            }
+          ]
+        }
+      ],
+      "horizontalAlignment": "Left"
+    },
+    {
+      "type": "ActionSet",
+      "actions": [
+        {
+          "type": "Action.ShowCard",
+          "title": "View more",
+          "card": {
+            "type": "AdaptiveCard",
+            "body": [
+              {
+                "type": "TextBlock",
+                "text": "${desc}",
+                "horizontalAlignment": "Left"
+              },
+              {
+                "type": "ColumnSet",
+                "columns": [
+                  {
+                    "type": "Column",
+                    "items": [
+                      {
+                        "type": "FactSet",
+                        "facts": [
+                          {
+                            "title": "Hi",
+                            "value": "${highest}°"
+                          },
+                          {
+                            "title": "Lo",
+                            "value": "${lowest}°"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "tooltip": "More weather info",
+          "style": "positive",
+          "mode": "primary"
+        }
+      ]
+    }
+  ]
+}
