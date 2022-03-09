@@ -1,5 +1,7 @@
 # Adaptive Cards Demo with Templating
 
+![Demo Photo](./ss.png)
+
 ## Tools Used
 
 - Adaptive Cards
